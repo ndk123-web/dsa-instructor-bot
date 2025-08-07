@@ -1,4 +1,6 @@
-# DSA Instru## 🚀 Features
+# DSA Instructor features 
+
+## 🚀 Features
 
 - **🎨 Modern UI Design**: Professional interface with dark/light theme support
 - **💬 Interactive Chat Interface**: Clean, responsive UI for seamless interaction
