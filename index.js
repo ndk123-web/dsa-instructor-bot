@@ -53,6 +53,10 @@ app.post("/api/chat" , async (req , res) => {
     }
 })
 
+app.get('/' , (req , res) => {
+    res.status(200).send("Hello This is Backend for my DSA Instructor Bot")
+})
+
 app.use( (err , req , res , next) => {
     console.error("Error: ", err.message);
     return res.status(500).json({ error: "Internal server error" });

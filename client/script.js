@@ -97,6 +97,19 @@ document.addEventListener('DOMContentLoaded', () => {
         const typingIndicator = showTypingIndicator();
 
         try {
+            const chat_limit = Number(localStorage.getItem('limit'));
+
+            if (!chat_limit) {
+                localStorage.setItem('limit', 1);
+            }
+
+            if (chat_limit && chat_limit >= 10) {
+                // Show a message indicating the chat limit has been reached
+                addBotMessage(`⚠️ You have reached the chat limit of ${chat_limit} messages. All user default has 10 limit`);
+                typingIndicator.remove();
+                return;
+            }
+
             const response = await fetch('http://localhost:3001/api/chat', {
                 method: 'POST',
                 headers: {
@@ -106,7 +119,10 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             const data = await response.json();
-            
+
+
+            localStorage.setItem('limit', chat_limit + 1);
+
             // Remove typing indicator
             typingIndicator.remove();
             
