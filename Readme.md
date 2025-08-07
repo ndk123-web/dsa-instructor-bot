@@ -1,7 +1,7 @@
 # DSA Instructor features 
 
 ### Live 
-- [http](https://dsa-instructor-bot-frontend.onrender.com/)
+- [Go To Live Link](https://dsa-instructor-bot-frontend.onrender.com/)
 - Make Sure u only have 10 chat limit
 
 ## 🚀 Features
